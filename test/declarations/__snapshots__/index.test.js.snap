@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`declarations rollup 1`] = `
+"'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+const reexport = 'reexport';
+
+exports.reexport = reexport;"
+`;
+
+exports[`declarations webpack 1`] = `
+"function(module, __webpack_exports__, __webpack_require__) {
+    'use strict';
+    // ESM COMPAT FLAG
+        __webpack_require__.r(__webpack_exports__), 
+    // EXPORTS
+    __webpack_require__.d(__webpack_exports__, 'reexport', (function() {
+        /* reexport */ return reexport;
+    }));
+    // CONCATENATED MODULE: ./test/declarations/exports.js
+    const reexport = 'reexport';
+}"
+`;

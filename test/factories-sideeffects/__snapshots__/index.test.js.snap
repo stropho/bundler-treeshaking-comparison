@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`factories-sideeffects rollup 1`] = `
+"'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+/* eslint-disable operator-linebreak */
+/* eslint-disable implicit-arrow-linebreak */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-undef */
+const reexport = 'reexport';
+const functionFactoryWithSideeffect = (constantValue) =>
+  ++someGlobalVar && (() => constantValue);
+
+const unusedStringGetterCreatedWithSideeffect =
+  functionFactoryWithSideeffect('unusedStringGetterCreatedWithSideeffect');
+
+exports.reexport = reexport;"
+`;
+
+exports[`factories-sideeffects webpack 1`] = `
+"function(module, __webpack_exports__, __webpack_require__) {
+    'use strict';
+    // ESM COMPAT FLAG
+        __webpack_require__.r(__webpack_exports__), 
+    // EXPORTS
+    __webpack_require__.d(__webpack_exports__, 'reexport', (function() {
+        /* reexport */ return reexport;
+    }));
+    // CONCATENATED MODULE: ./test/factories-sideeffects/exports.js
+    /* eslint-disable operator-linebreak */
+    /* eslint-disable implicit-arrow-linebreak */
+    /* eslint-disable no-plusplus */
+    /* eslint-disable no-undef */
+    const reexport = 'reexport', functionFactoryWithSideeffect = constantValue => ++someGlobalVar && (() => constantValue);
+    functionFactoryWithSideeffect('unusedStringGetterCreatedWithSideeffect');
+}"
+`;

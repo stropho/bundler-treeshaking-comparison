@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`factories rollup 1`] = `
+"'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+/* eslint-disable operator-linebreak */
+const reexport = 'reexport';
+
+exports.reexport = reexport;"
+`;
+
+exports[`factories webpack 1`] = `
+"function(module, __webpack_exports__, __webpack_require__) {
+    'use strict';
+    // ESM COMPAT FLAG
+        __webpack_require__.r(__webpack_exports__), 
+    // EXPORTS
+    __webpack_require__.d(__webpack_exports__, 'reexport', (function() {
+        /* reexport */ return reexport;
+    }));
+    // CONCATENATED MODULE: ./test/factories/exports.js
+    /* eslint-disable operator-linebreak */
+    const reexport = 'reexport', functionFactory = constantValue => () => constantValue;
+    functionFactory('unusedStringGetter');
+}"
+`;
