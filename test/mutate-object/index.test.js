@@ -1,0 +1,16 @@
+import path from 'path'
+import { getRollupOutput, getWebpackExtractedCode } from '../../src'
+
+const FOLDER = path.basename(__dirname)
+const INPUT_FILE = path.resolve(__dirname, './input.js')
+
+describe(FOLDER, () => {
+  test('rollup', async () => {
+    const code = await getRollupOutput(INPUT_FILE)
+    expect(code).toMatchSnapshot()
+  })
+  test('webpack', async () => {
+    const result = await getWebpackExtractedCode(INPUT_FILE)
+    expect(result).toMatchSnapshot()
+  })
+})
