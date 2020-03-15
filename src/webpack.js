@@ -2,6 +2,7 @@ import { createFsFromVolume, Volume } from 'memfs'
 import webpack from 'webpack'
 import TerserPlugin from 'terser-webpack-plugin'
 import path from 'path'
+import { TERSER_OPTIONS } from './terser'
 
 const CONFIG = {
   mode: 'production',
@@ -9,14 +10,7 @@ const CONFIG = {
     minimize: true,
     minimizer: [
       new TerserPlugin({
-        terserOptions: {
-          mangle: false,
-          output: { // default null,
-            comments: 'all',
-            beautify: true,
-            quote_style: 1, // single quote
-          },
-        },
+        terserOptions: TERSER_OPTIONS,
       }),
     ],
   },
