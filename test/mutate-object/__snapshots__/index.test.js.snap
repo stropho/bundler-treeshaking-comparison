@@ -10,7 +10,7 @@ const reexport = 'reexport';
 exports.reexport = reexport;"
 `;
 
-exports[`mutate-object webpack 1`] = `
+exports[`mutate-object webpack + terser 1`] = `
 "function(module, __webpack_exports__, __webpack_require__) {
     'use strict';
     // ESM COMPAT FLAG

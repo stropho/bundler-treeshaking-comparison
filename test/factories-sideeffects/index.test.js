@@ -9,7 +9,7 @@ describe(FOLDER, () => {
     const code = await getRollupOutput(INPUT_FILE)
     expect(code).toMatchSnapshot()
   })
-  test('webpack', async () => {
+  test('webpack + terser', async () => {
     const result = await getWebpackExtractedCode(INPUT_FILE)
     expect(result).toMatchSnapshot()
   })

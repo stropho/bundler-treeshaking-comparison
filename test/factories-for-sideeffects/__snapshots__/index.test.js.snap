@@ -22,7 +22,7 @@ const unusedResultOfCreatedFunctionWithSideeffect = usedStringGetterWithSideeffe
 exports.reexport = reexport;"
 `;
 
-exports[`factories-for-sideeffects webpack 1`] = `
+exports[`factories-for-sideeffects webpack + terser 1`] = `
 "function(module, __webpack_exports__, __webpack_require__) {
     'use strict';
     // ESM COMPAT FLAG
