@@ -11,6 +11,19 @@ const reexport = 'reexport';
 exports.reexport = reexport;"
 `;
 
+exports[`factories terser 1`] = `
+"Object.defineProperty(exports, '__esModule', {
+    value: !0
+});
+
+/* eslint-disable operator-linebreak */
+const functionFactory = constantValue => () => constantValue;
+
+functionFactory('unusedStringGetter');
+
+exports.reexport = 'reexport';"
+`;
+
 exports[`factories webpack + terser 1`] = `
 "function(module, __webpack_exports__, __webpack_require__) {
     'use strict';

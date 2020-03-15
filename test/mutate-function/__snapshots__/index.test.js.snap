@@ -10,6 +10,25 @@ const reexport = 'reexport';
 exports.reexport = reexport;"
 `;
 
+exports[`mutate-function terser 1`] = `
+"Object.defineProperty(exports, '__esModule', {
+    value: !0
+});
+
+const unusedMutatedFn2Props = () => 'unusedMutatedFn2Props';
+
+unusedMutatedFn2Props.unusedMutatedObject2Props_foo = !0, unusedMutatedFn2Props.unusedMutatedObject2Props_bar = 'bar';
+
+const unusedMutatedFn3Props = () => 'unusedMutatedFn3Props';
+
+unusedMutatedFn3Props.unusedMutatedObject3Prop_foo = !0, unusedMutatedFn3Props.unusedMutatedObject3Prop_bar = 'bar', 
+unusedMutatedFn3Props.unusedMutatedObject3Prop_baz = {
+    baz: !0
+};
+
+exports.reexport = 'reexport';"
+`;
+
 exports[`mutate-function webpack + terser 1`] = `
 "function(module, __webpack_exports__, __webpack_require__) {
     'use strict';
